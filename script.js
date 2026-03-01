@@ -235,6 +235,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (carouselContainer && carouselTrack && prevButton && nextButton) {
         let currentScroll = 0;
         const itemWidth = 310; // 280px + 30px gap
+        let startX = 0;
+        let isDragging = false;
+        let startScrollPosition = 0;
         
         // Función para mover el carrusel manualmente
         const moveCarousel = (direction) => {
@@ -271,6 +274,46 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             moveCarousel('next');
         });
+        
+        // Funcionalidad de swipe/deslizar táctil
+        carouselTrack.addEventListener('mousedown', handleDragStart);
+        carouselTrack.addEventListener('touchstart', handleDragStart, { passive: true });
+        carouselTrack.addEventListener('mousemove', handleDragMove);
+        carouselTrack.addEventListener('touchmove', handleDragMove, { passive: false });
+        carouselTrack.addEventListener('mouseup', handleDragEnd);
+        carouselTrack.addEventListener('touchend', handleDragEnd);
+        carouselTrack.addEventListener('mouseleave', handleDragEnd);
+        
+        function handleDragStart(e) {
+            isDragging = true;
+            startX = e.type === 'mousedown' ? e.pageX : e.touches[0].pageX;
+            startScrollPosition = currentScroll;
+            carouselTrack.style.animationPlayState = 'paused';
+            carouselTrack.style.transition = 'none';
+        }
+        
+        function handleDragMove(e) {
+            if (!isDragging) return;
+            e.preventDefault();
+            
+            const currentX = e.type === 'mousemove' ? e.pageX : e.touches[0].pageX;
+            const diff = currentX - startX;
+            currentScroll = startScrollPosition + diff;
+            carouselTrack.style.transform = `translateX(${currentScroll}px)`;
+        }
+        
+        function handleDragEnd(e) {
+            if (!isDragging) return;
+            isDragging = false;
+            
+            // Reanudar animación después de 2 segundos
+            setTimeout(() => {
+                carouselTrack.style.transition = '';
+                carouselTrack.style.transform = '';
+                carouselTrack.style.animationPlayState = 'running';
+                currentScroll = 0;
+            }, 2000);
+        }
     }
 
     // Consola de bienvenida

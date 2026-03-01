@@ -881,6 +881,201 @@ body {
     font-size: 1rem;
 }
 
+/* Redes Sociales Section */
+.social-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, var(--deep-black) 0%, var(--carbon-black) 50%, var(--deep-black) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(245, 200, 66, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    margin-top: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-card {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(13, 13, 13, 0.9) 100%);
+    padding: 50px 40px;
+    border-radius: 30px;
+    text-align: center;
+    border: 2px solid rgba(245, 200, 66, 0.2);
+    text-decoration: none;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        transparent,
+        rgba(245, 200, 66, 0.1),
+        transparent 30%
+    );
+    animation: rotate 4s linear infinite;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.social-card:hover::before {
+    opacity: 1;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.social-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    border-color: var(--electric-gold);
+    box-shadow: 0 20px 60px rgba(245, 200, 66, 0.4);
+}
+
+.instagram-card:hover {
+    box-shadow: 0 20px 60px rgba(253, 29, 29, 0.4);
+}
+
+.facebook-card:hover {
+    box-shadow: 0 20px 60px rgba(24, 119, 242, 0.4);
+}
+
+.social-icon-wrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 30px;
+}
+
+.social-icon {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+    transition: all 0.4s ease;
+}
+
+.social-card:hover .social-icon {
+    transform: scale(1.1) rotateY(360deg);
+    filter: drop-shadow(0 15px 40px rgba(245, 200, 66, 0.6));
+}
+
+.electric-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(245, 200, 66, 0.3) 0%, transparent 70%);
+    animation: electricPulse 2s ease-in-out infinite;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.social-card:hover .electric-effect {
+    opacity: 1;
+}
+
+@keyframes electricPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px rgba(245, 200, 66, 0.5),
+                    0 0 40px rgba(245, 200, 66, 0.3),
+                    0 0 60px rgba(245, 200, 66, 0.2);
+    }
+    50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 40px rgba(245, 200, 66, 0.8),
+                    0 0 80px rgba(245, 200, 66, 0.5),
+                    0 0 120px rgba(245, 200, 66, 0.3);
+    }
+}
+
+.instagram-card:hover .electric-effect {
+    background: radial-gradient(circle, rgba(253, 29, 29, 0.3) 0%, transparent 70%);
+}
+
+.facebook-card:hover .electric-effect {
+    background: radial-gradient(circle, rgba(24, 119, 242, 0.3) 0%, transparent 70%);
+}
+
+.social-card h3 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5rem;
+    color: var(--electric-gold);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.social-card p {
+    color: var(--gray-text);
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.follow-text {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--copper), var(--electric-gold));
+    color: white;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.social-card:hover .follow-text {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(245, 200, 66, 0.5);
+}
+
+@media (max-width: 768px) {
+    .social-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .social-icon-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .social-card h3 {
+        font-size: 2rem;
+    }
+}
+
 /* Footer */
 .footer {
     background: var(--deep-black);
@@ -939,6 +1134,21 @@ body {
     padding-top: 30px;
     border-top: 1px solid rgba(255, 182, 39, 0.2);
     color: var(--gray-text);
+}
+
+.firma-ruaimi {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 14px;
+    color: rgba(212, 149, 60, 0.3);
+    margin-top: 8px;
+    font-style: italic;
+    letter-spacing: 2px;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.firma-ruaimi:hover {
+    opacity: 0.7;
 }
 
 /* Responsive */
@@ -1367,7 +1577,12 @@ html {
 .carousel-track {
     display: flex;
     gap: 30px;
-    animation: scroll 30s linear infinite;
+    animation: scroll 20s linear infinite;
+    cursor: grab;
+}
+
+.carousel-track:active {
+    cursor: grabbing;
 }
 
 .carousel-item {
@@ -1833,7 +2048,8 @@ html {
     100% {
         opacity: 0;
         transform: translateX(-50%) translateY(-10px);
-        display: none;
+        visibility: hidden;
+        pointer-events: none;
     }
 }
 
