@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 message = '¡Estamos abiertos! Servicio de cena.';
                 isOpen = true;
             } else {
-                message = 'Cerrado ahora. Abrimos a las 20:00.';
+                message = '20 hs ACTIVOS !!';
             }
         }
 

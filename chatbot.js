@@ -249,7 +249,7 @@ function handleQuickReply(action) {
                     if (hour >= 20 && hour < 23) {
                         status = '✅ <strong>¡Estamos ABIERTOS ahora!</strong>';
                     } else {
-                        status = '⏰ <strong>Cerrado ahora</strong>, abrimos a las 20:00';
+                        status = '🔥 <strong>20 hs ACTIVOS !!</strong>';
                     }
                 }
                 
