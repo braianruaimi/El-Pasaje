@@ -1,0 +1,179 @@
+═══════════════════════════════════════════════════════
+   🔐 ACCESO RÁPIDO CEO - EL PASAJE FOOD DASHBOARD
+═══════════════════════════════════════════════════════
+
+📊 DASHBOARD DE MÉTRICAS Y ANÁLISIS
+Visualiza ventas, conversiones y estadísticas en tiempo real
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 FORMAS DE ACCEDER:
+
+1️⃣ MÉTODO RÁPIDO - URL Directa
+   • Abre tu navegador
+   • Ingresa: file:///C:/Users/Public/el-pasaje-food/dashboard.html
+   • ✅ Acceso instantáneo (sin contraseña)
+
+2️⃣ MÉTODO SECRETO - Punto Oculto 🔐
+   • Ve al footer de la página principal
+   • Busca un punto blanco casi invisible ANTES del "©2026"
+   • Click en él
+   • Ingresa la contraseña: 1234
+   • ✨ Acceso al dashboard
+
+   ⚠️ IMPORTANTE: El punto es casi transparente
+   • Color: rgba(255,255,255,0.01) - prácticamente invisible
+   • Ubicación exacta: justo antes del símbolo ©
+   • No tiene tooltip para mayor discreción
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📈 QUÉ VERÁS EN EL DASHBOARD:
+
+💰 INGRESOS TOTALES
+   → Suma de todos los pedidos realizados
+   → Ticket promedio por orden
+
+📦 PEDIDOS COMPLETADOS
+   → Cantidad total de órdenes
+   → Historial detallado
+
+👁️ VISITAS Y TRÁFICO
+   → Total de vistas de página
+   → Visitantes únicos
+
+📱 ENGAGEMENT
+   → Clicks en WhatsApp
+   → Tasa de conversión
+
+🍔 PRODUCTOS
+   → Ranking de más vendidos
+   → Ingresos por producto
+   → Popularidad comparativa
+
+📊 GRÁFICOS EN TIEMPO REAL
+   → Evolución de ventas (7 días)
+   → Productos más vendidos (Top 5)
+   → Conversiones vs Visitas
+   → Crecimiento acumulado (14 días)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 FUNCIONES PRINCIPALES:
+
+🔄 ACTUALIZAR
+   • Recarga las métricas sin refrescar página
+   • Útil cuando el sitio está abierto en otra pestaña
+
+💾 EXPORTAR DATOS
+   • Descarga archivo JSON con toda la información
+   • Ideal para backups o análisis externos
+   • Formato: elpasaje-metrics-YYYY-MM-DD.json
+
+🏠 IR AL SITIO
+   • Vuelve a la página principal del negocio
+
+🗑️ RESETEAR MÉTRICAS
+   ⚠️ CUIDADO: Borra TODOS los datos permanentemente
+   • Requiere contraseña (1234)
+   • Requiere confirmación adicional
+   • No se puede deshacer
+   • Usar solo al comenzar nueva temporada
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📝 DATOS QUE SE RASTREAN AUTOMÁTICAMENTE:
+
+✅ Cada visita a la página principal
+✅ Cada click en enlaces de WhatsApp
+✅ Cada vez que agregan algo al carrito
+✅ Cada pedido completado (con detalle de productos)
+✅ Ingresos por día, semana y acumulado
+✅ Estadísticas de cada producto individual
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 TIPS DE USO:
+
+🌅 RUTINA MATUTINA
+   1. Abrir dashboard
+   2. Revisar ventas del día anterior
+   3. Verificar productos más pedidos
+   4. Ajustar stock según demanda
+
+📊 ANÁLISIS SEMANAL
+   1. Domingo por la noche: Exportar datos
+   2. Comparar con semana anterior
+   3. Identificar días pico de ventas
+   4. Planificar promociones para días bajos
+
+🎯 OPTIMIZACIÓN
+   • Producto con baja popularidad → Revisar precio/descripción
+   • Alta tasa de conversión → Mantener estrategia
+   • Muchas visitas, pocas ventas → Mejorar llamados a la acción
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔒 SEGURIDAD Y PRIVACIDAD:
+
+• Contraseña requerida desde el sitio web: 1234
+• Contraseña almacenada en código (script.js)
+• Acceso directo por URL no requiere contraseña
+• Datos almacenados solo en tu navegador
+• No se envía información a servidores externos
+• Los clientes no pueden ver estas métricas
+• Punto de acceso prácticamente invisible
+
+🔐 CAMBIAR LA CONTRASEÑA:
+   1. Abre el archivo: script.js
+   2. Busca la función: accessCEO()
+   3. Cambia '1234' por tu nueva contraseña
+   4. Guarda el archivo
+
+💾 BACKUP RECOMENDADO:
+   → Exportar datos cada domingo
+   → Guardar archivos JSON en carpeta segura
+   → Permite restaurar si se borra historial del navegador
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🆘 SOLUCIÓN DE PROBLEMAS:
+
+❌ No veo datos
+   → Asegúrate de que hubo actividad en el sitio
+   → Navega por index.html, agrega productos, haz pedido de prueba
+
+❌ Gráficos no cargan
+   → Verifica conexión a internet (usa CDN de Chart.js)
+   → Refresca la página (F5)
+
+❌ Datos se borraron
+   → Restaura desde último backup JSON exportado
+   → Presiona F12 → Application → Local Storage → Restaurar
+
+❌ Métricas no actualizan
+   → Click en botón "🔄 Actualizar"
+   → Si persiste, refresca página completa
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📚 DOCUMENTACIÓN COMPLETA:
+Ver archivo: DASHBOARD-README.md
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎉 ¡TODO LISTO!
+
+El sistema está funcionando y rastreando métricas desde ahora.
+Cada interacción en el sitio queda registrada automáticamente.
+
+Para ver tus primeras métricas:
+1. Abre dashboard.html
+2. Navega por el sitio principal
+3. Agrega productos al carrito
+4. Haz click en "Quiero pedir"
+5. Vuelve al dashboard y actualiza
+
+═══════════════════════════════════════════════════════
+Desarrollado con 🔥 para El Pasaje Food | Marzo 2026
+═══════════════════════════════════════════════════════

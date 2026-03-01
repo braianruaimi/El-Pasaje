@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Las mejores hamburguesas artesanales de Ensenada. Pedí online con delivery rápido o visitá nuestro local. Carne premium, pan artesanal y salsas secretas.">
+    <meta name="theme-color" content="#F5C842">
+    <title>El Pasaje Food - Las Mejores Hamburguesas Artesanales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="El Pasaje Food">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header con botón PWA -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">El Pasaje Food</div>
+            <button id="installBtn" class="install-button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                </svg>
+                Instalar como App
+            </button>
+        </div>
+    </header>
+
+    <!-- Botones flotantes -->
+    <div class="floating-buttons">
+        <a href="#combos" class="float-button order-button" title="¡Quiero pedir!">
+            <span class="burger-emoji">🍔</span>
+        </a>
+        <a href="https://wa.me/5492215047962?text=¡Hola!%20Quiero%20hacer%20un%20pedido" class="float-button whatsapp-float" target="_blank" title="Contactar por WhatsApp">
+            <svg viewBox="0 0 32 32" fill="white" width="24" height="24">
+                <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.188-2.113c2.35 1.287 5.024 1.963 7.812 1.963 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.25c-2.444 0-4.819-0.662-6.912-1.912l-0.512-0.3-5.044 1.3 1.35-5.012-0.337-0.525c-1.362-2.137-2.087-4.612-2.087-7.15 0-7.456 6.069-13.525 13.525-13.525s13.525 6.069 13.525 13.525-6.053 13.6-13.512 13.6zM23.362 19.106c-0.4-0.2-2.363-1.163-2.725-1.3-0.363-0.125-0.625-0.188-0.888 0.2s-1.025 1.3-1.25 1.563c-0.225 0.262-0.45 0.3-0.85 0.1s-1.65-0.606-3.137-1.931c-1.163-1.031-1.944-2.306-2.169-2.706s-0.025-0.612 0.175-0.812c0.181-0.175 0.4-0.463 0.6-0.688 0.2-0.237 0.263-0.4 0.388-0.662 0.125-0.263 0.063-0.488-0.037-0.688s-0.888-2.137-1.213-2.925c-0.319-0.769-0.644-0.663-0.888-0.675-0.231-0.012-0.488-0.012-0.75-0.012s-0.688 0.1-1.050 0.488c-0.363 0.4-1.375 1.337-1.375 3.262s1.413 3.787 1.606 4.050c0.2 0.262 2.794 4.269 6.769 5.981 0.944 0.406 1.681 0.65 2.256 0.831 0.95 0.3 1.813 0.256 2.494 0.156 0.762-0.113 2.363-0.963 2.694-1.894 0.331-0.931 0.331-1.731 0.231-1.894-0.094-0.175-0.356-0.275-0.756-0.475z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Sección Héroe -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Sabor Real en Cada Mordida</h1>
+            <p class="hero-subtitle">Las hamburguesas más deseadas de Ensenada, hechas con pasión y los mejores ingredientes</p>
+            <a href="https://wa.me/5492215047962?text=¡Hola!%20Quiero%20hacer%20un%20pedido" class="cta-button pulse" target="_blank">
+                <svg viewBox="0 0 32 32" fill="white" width="24" height="24">
+                    <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.188-2.113c2.35 1.287 5.024 1.963 7.812 1.963 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.25c-2.444 0-4.819-0.662-6.912-1.912l-0.512-0.3-5.044 1.3 1.35-5.012-0.337-0.525c-1.362-2.137-2.087-4.612-2.087-7.15 0-7.456 6.069-13.525 13.525-13.525s13.525 6.069 13.525 13.525-6.053 13.6-13.512 13.6zM23.362 19.106c-0.4-0.2-2.363-1.163-2.725-1.3-0.363-0.125-0.625-0.188-0.888 0.2s-1.025 1.3-1.25 1.563c-0.225 0.262-0.45 0.3-0.85 0.1s-1.65-0.606-3.137-1.931c-1.163-1.031-1.944-2.306-2.169-2.706s-0.025-0.612 0.175-0.812c0.181-0.175 0.4-0.463 0.6-0.688 0.2-0.237 0.263-0.4 0.388-0.662 0.125-0.263 0.063-0.488-0.037-0.688s-0.888-2.137-1.213-2.925c-0.319-0.769-0.644-0.663-0.888-0.675-0.231-0.012-0.488-0.012-0.75-0.012s-0.688 0.1-1.050 0.488c-0.363 0.4-1.375 1.337-1.375 3.262s1.413 3.787 1.606 4.050c0.2 0.262 2.794 4.269 6.769 5.981 0.944 0.406 1.681 0.65 2.256 0.831 0.95 0.3 1.813 0.256 2.494 0.156 0.762-0.113 2.363-0.963 2.694-1.894 0.331-0.931 0.331-1.731 0.231-1.894-0.094-0.175-0.356-0.275-0.756-0.475z"/>
+                </svg>
+                Pedí por WhatsApp Ahora
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Desliza para descubrir</span>
+            <div class="arrow-down"></div>
+        </div>
+    </section>
+
+    <!-- Propuesta de Valor -->
+    <section class="value-proposition">
+        <div class="container">
+            <h2 class="section-title">¿Por Qué Somos Diferentes?</h2>
+            <p class="section-subtitle">Comida rápida no tiene que significar baja calidad. En El Pasaje Food, cada hamburguesa es una obra de arte culinaria.</p>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">🥩</div>
+                    <h3>Carne 100% Seleccionada</h3>
+                    <p>Solo utilizamos los mejores cortes, seleccionados cuidadosamente para garantizar jugosidad y sabor en cada bocado.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🍞</div>
+                    <h3>Pan Artesanal Horneado Hoy</h3>
+                    <p>Nuestro pan se hornea fresco cada día en nuestro local. Ese aroma y textura que tanto te gusta.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🔥</div>
+                    <h3>Salsas Secretas</h3>
+                    <p>Recetas únicas desarrolladas por nosotros. El toque especial que nos distingue y que todos buscan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrusel de Combos -->
+    <section class="carousel-section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Combos Destacados</h2>
+            <div class="carousel-container">
+                <button class="carousel-arrow carousel-arrow-left" id="carousel-prev">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                </button>
+                <button class="carousel-arrow carousel-arrow-right" id="carousel-next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                    </svg>
+                </button>
+                <div class="carousel-track" id="carousel-track">
+                    <a href="#combos" class="carousel-item">
+                        <div class="carousel-image" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&h=200&fit=crop');"></div>
+                        <h4>Burger SABROSA</h4>
+                        <p class="carousel-price">$13.200</p>
+                    </a>
+                    <a href="#combos" class="carousel-item">
+                        <div class="carousel-image" style="background-image: url('https://images.unsplash.com/photo-1550547660-d9450f859349?w=300&h=200&fit=crop');"></div>
+                        <h4>Doble Queso Doble Carne</h4>
+                        <p class="carousel-price">2x $18.300</p>
+                    </a>
+                    <a href="#combos" class="carousel-item">
+                        <div class="carousel-image" style="background-image: url('https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=300&h=200&fit=crop');"></div>
+                        <h4>Burger Cheddar</h4>
+                        <p class="carousel-price">$12.300</p>
+                    </a>
+                    <a href="#combos" class="carousel-item">
+                        <div class="carousel-image" style="background-image: url('https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=300&h=200&fit=crop');"></div>
+                        <h4>Burger LOCA</h4>
+                        <p class="carousel-price">$18.400</p>
+                    </a>
+                    <!-- Duplicado para loop infinito -->
+                    <a href="#combos" class="carousel-item">
+                        <div class="carousel-image" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&h=200&fit=crop');"></div>
+                        <h4>Burger SABROSA</h4>
+                        <p class="carousel-price">$13.200</p>
+                    </a>
+                    <a href="#combos" class="carousel-item">
+                        <div class="carousel-image" style="background-image: url('https://images.unsplash.com/photo-1550547660-d9450f859349?w=300&h=200&fit=crop');"></div>
+                        <h4>Doble Queso Doble Carne</h4>
+                        <p class="carousel-price">2x $18.300</p>
+                    </a>
+                    <a href="#combos" class="carousel-item">
+                        <div class="carousel-image" style="background-image: url('https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=300&h=200&fit=crop');"></div>
+                        <h4>Burger Cheddar</h4>
+                        <p class="carousel-price">$12.300</p>
+                    </a>
+                    <a href="#combos" class="carousel-item">
+                        <div class="carousel-image" style="background-image: url('https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=300&h=200&fit=crop');"></div>
+                        <h4>Burger LOCA</h4>
+                        <p class="carousel-price">$18.400</p>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="loyalty-banner">
+                <div class="loyalty-content">
+                    <span class="loyalty-icon">💛</span>
+                    <p><strong>¡Si venís al local, la buena onda va por la casa!</strong></p>
+                    <span>Promociones especiales, degustaciones y más sorpresas te esperan</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Experiencia -->
+    <section class="experience">
+        <div class="container">
+            <h2 class="section-title">Tu Elección, Nuestra Pasión</h2>
+            
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-image local-img">
+                        <div class="experience-badge">LOCAL</div>
+                    </div>
+                    <div class="experience-content">
+                        <h3>Vení al Local</h3>
+                        <p class="location">📍 Pte. Perón y Esq. Dr. Sidoti</p>
+                        <p>Viví la experiencia completa en nuestro espacio rústico y acogedor. El lugar perfecto para compartir con amigos, disfrutar de buena música y sentir el aroma de las hamburguesas a la parrilla.</p>
+                        <ul class="benefits-list">
+                            <li>✨ Ambiente vibrante y moderno</li>
+                            <li>✨ Atención personalizada</li>
+                            <li>✨ ¡La buena onda va por la casa!</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-card reverse">
+                    <div class="experience-image delivery-img">
+                        <div class="experience-badge orange">DELIVERY</div>
+                    </div>
+                    <div class="experience-content">
+                        <h3>Entrega a Domicilio</h3>
+                        <p class="delivery-promise">🚀 Rápido y Confiable</p>
+                        <p>¿Querés disfrutar en casa? No hay problema. Nuestro servicio de delivery te lleva las hamburguesas calientes, frescas y listas para devorar en la comodidad de tu hogar.</p>
+                        <ul class="benefits-list">
+                            <li>⚡ Entrega en tiempo récord</li>
+                            <li>⚡ Empaquetado especial para mantener el calor</li>
+                            <li>⚡ Pedí por WhatsApp en segundos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Combos Imbatibles -->
+    <section class="combos" id="combos">
+        <div class="container">
+            <h2 class="section-title fire-title">Combos Imbatibles</h2>
+            <p class="section-subtitle">Más sabor, mejor precio. Armamos combos pensados para que disfrutes al máximo.</p>
+            
+            <div class="combos-grid">
+                <div class="combo-card featured">
+                    <div class="combo-badge">MÁS VENDIDO</div>
+                    <div class="combo-image" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=400&fit=crop');"></div>
+                    <h3>Burger SABROSA</h3>
+                    <p class="combo-description">La hamburguesa que nos hizo famosos</p>
+                    <ul class="combo-includes">
+                        <li>Hamburguesa completa premium</li>
+                        <li>Papas rústicas caseras</li>
+                    </ul>
+                    <div class="combo-price">
+                        <span class="price-old">$17.850</span>
+                        <span class="price-current">$13.200</span>
+                        <button class="add-to-cart-btn" data-name="Burger SABROSA" data-price="13200">+</button>
+                    </div>
+                    <div class="combo-cta">
+                        <a href="https://wa.me/5492215047962?text=Quiero%20la%20Burger%20SABROSA" class="combo-button" target="_blank">Pedir Ahora</a>
+                    </div>
+                </div>
+
+                <div class="combo-card">
+                    <div class="combo-image" style="background-image: url('https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&h=400&fit=crop');"></div>
+                    <h3>Burger Doble Queso y Doble Carne</h3>
+                    <p class="combo-description">Para los que quieren el doble de sabor</p>
+                    <ul class="combo-includes">
+                        <li>Doble carne jugosa</li>
+                        <li>Doble queso derretido</li>
+                        <li>Papas rústicas caseras</li>
+                    </ul>
+                    <div class="combo-price">
+                        <span class="price-old">$24.600</span>
+                        <span class="price-current">2x $18.300</span>
+                        <button class="add-to-cart-btn" data-name="Burger Doble Queso y Doble Carne" data-price="18300">+</button>
+                    </div>
+                    <div class="combo-cta">
+                        <a href="https://wa.me/5492215047962?text=Quiero%20la%20Burger%20Doble" class="combo-button" target="_blank">Pedir Ahora</a>
+                    </div>
+                </div>
+
+                <div class="combo-card">
+                    <div class="combo-image" style="background-image: url('https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600&h=400&fit=crop');"></div>
+                    <h3>Burger Cheddar</h3>
+                    <p class="combo-description">El placer del queso cheddar auténtico</p>
+                    <ul class="combo-includes">
+                        <li>Cheddar premium</li>
+                        <li>Carne seleccionada</li>
+                        <li>Papas rústicas caseras</li>
+                    </ul>
+                    <div class="combo-price">
+                        <span class="price-old">$15.600</span>
+                        <span class="price-current">$12.300</span>
+                        <button class="add-to-cart-btn" data-name="Burger Cheddar" data-price="12300">+</button>
+                    </div>
+                    <div class="combo-cta">
+                        <a href="https://wa.me/5492215047962?text=Quiero%20la%20Burger%20Cheddar" class="combo-button" target="_blank">Pedir Ahora</a>
+                    </div>
+                </div>
+
+                <div class="combo-card special">
+                    <div class="combo-badge">ESPECIAL</div>
+                    <div class="combo-image" style="background-image: url('https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=600&h=400&fit=crop');"></div>
+                    <h3>Burger LOCA</h3>
+                    <p class="combo-description">Jugosa · Crocante · Fresca</p>
+                    <p class="combo-tagline">Probá el equilibrio entre la LOCURA y el SABOR</p>
+                    <ul class="combo-includes">
+                        <li>Combinación única de sabores</li>
+                        <li>Texturas irresistibles</li>
+                        <li>Papas rústicas caseras</li>
+                    </ul>
+                    <div class="combo-price">
+                        <span class="price-old">$23.400</span>
+                        <span class="price-current">$18.400</span>
+                        <button class="add-to-cart-btn" data-name="Burger LOCA" data-price="18400">+</button>
+                    </div>
+                    <div class="combo-cta">
+                        <a href="https://wa.me/5492215047962?text=Quiero%20la%20Burger%20LOCA" class="combo-button" target="_blank">Pedir Ahora</a>
+                    </div>
+                </div>
+
+                <div class="combo-card">
+                    <div class="combo-image" style="background-image: url('https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600&h=400&fit=crop');"></div>
+                    <h3>Papas Cheddar</h3>
+                    <p class="combo-description">Irresistibles y cremosas</p>
+                    <ul class="combo-includes">
+                        <li>Papas rústicas premium</li>
+                        <li>Cheddar derretido auténtico</li>
+                        <li>Bacon crocante</li>
+                    </ul>
+                    <div class="combo-price">
+                        <span class="price-old">$16.250</span>
+                        <span class="price-current">$13.560</span>
+                        <button class="add-to-cart-btn" data-name="Papas Cheddar" data-price="13560">+</button>
+                    </div>
+                    <div class="combo-cta">
+                        <a href="https://wa.me/5492215047962?text=Quiero%20Papas%20Cheddar" class="combo-button" target="_blank">Pedir Ahora</a>
+                    </div>
+                </div>
+
+                <div class="combo-card">
+                    <div class="combo-image" style="background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&h=400&fit=crop');"></div>
+                    <h3>Pizza El Pasaje</h3>
+                    <p class="combo-description">La pizza que conquistó Ensenada</p>
+                    <ul class="combo-includes">
+                        <li>Masa casera fermentada 24hs</li>
+                        <li>Mozzarella de primera calidad</li>
+                        <li>Salsa de tomate con receta secreta</li>
+                    </ul>
+                    <div class="combo-price">
+                        <span class="price-old">$14.750</span>
+                        <span class="price-current">$12.760</span>
+                        <button class="add-to-cart-btn" data-name="Pizza El Pasaje" data-price="12760">+</button>
+                    </div>
+                    <div class="combo-cta">
+                        <a href="https://wa.me/5492215047962?text=Quiero%20Pizza%20El%20Pasaje" class="combo-button" target="_blank">Pedir Ahora</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="extra-combo">
+                <div class="extra-card">
+                    <span class="extra-icon">🥤</span>
+                    <h4>¡Sumá una Coca-Cola!</h4>
+                    <div class="extra-price-container">
+                        <p class="extra-price">+ $1.420</p>
+                        <button class="add-to-cart-btn" data-name="Coca-Cola" data-price="1420">+</button>
+                    </div>
+                    <p class="extra-note">Agregala a cualquier burger</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medios de Pago -->
+    <section class="payment-methods">
+        <div class="container">
+            <h2 class="section-title">Medios de Pago</h2>
+            <p class="section-subtitle">Aceptamos múltiples formas de pago para tu comodidad</p>
+            
+            <div class="payment-grid">
+                <div class="payment-card">
+                    <div class="payment-icon">💵</div>
+                    <h4>Efectivo</h4>
+                    <p>Pesos argentinos</p>
+                </div>
+                <div class="payment-card">
+                    <div class="payment-icon">💳</div>
+                    <h4>Mercado Pago</h4>
+                    <p>Todas las tarjetas</p>
+                </div>
+                <div class="payment-card">
+                    <div class="payment-icon">🏦</div>
+                    <h4>Cuenta DNI</h4>
+                    <p>Transferencias</p>
+                </div>
+                <div class="payment-card">
+                    <div class="payment-icon">🪙</div>
+                    <h4>USDT</h4>
+                    <p>Criptomonedas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horarios de Atención -->
+    <section class="horarios">
+        <div class="container">
+            <h2 class="section-title">¿Cuándo Estamos Abiertos?</h2>
+            <p class="section-subtitle">Organizá tu visita o pedido según nuestros horarios</p>
+            
+            <div class="horarios-grid">
+                <div class="horario-card">
+                    <div class="horario-icon">☀️</div>
+                    <h3>Almuerzos</h3>
+                    <div class="horario-time">11:30 a 14:00 hs</div>
+                    <p class="horario-days">Martes a Viernes</p>
+                    <p class="horario-note">Perfecto para un break del trabajo</p>
+                </div>
+
+                <div class="horario-card featured">
+                    <div class="horario-icon">🌙</div>
+                    <h3>Cenas</h3>
+                    <div class="horario-time">20:00 a 23:00 hs</div>
+                    <p class="horario-days">Martes a Domingos</p>
+                    <p class="horario-note">La mejor opción para cerrar el día</p>
+                </div>
+            </div>
+
+            <div class="horario-alert">
+                <strong>⚠️ Importante:</strong> Los lunes permanecemos cerrados para descansar y preparar lo mejor para vos.
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación -->
+    <section class="ubicacion" id="ubicacion">
+        <div class="container">
+            <h2 class="section-title">Encontranos Fácilmente</h2>
+            <p class="section-subtitle">📍 Pte. Perón y Esq. Dr. Sidoti</p>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.7!2d-60.6393!3d-32.9468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDU2JzQ4LjUiUyA2MMKwMzgnMjEuNSJX!5e0!3m2!1ses!2sar!4v1234567890"
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <div class="ubicacion-info">
+                <div class="info-card">
+                    <span class="info-icon">🚗</span>
+                    <p><strong>Fácil estacionamiento</strong><br>Zona con buena disponibilidad</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">🚶</span>
+                    <p><strong>Acceso peatonal</strong><br>Esquina céntrica y segura</p>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">🚌</span>
+                    <p><strong>Transporte público</strong><br>Varias líneas cercanas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>El Pasaje Food</h3>
+                    <p>Las mejores hamburguesas de la región hechas con ingredientes de la casa. Hechas con pasión, servidas con amor.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>📍 Pte. Perón y Esq. Dr. Sidoti</p>
+                    <p>📱 WhatsApp: +54 9 123 456 7890</p>
+                    <p>📧 info@elpasajefood.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Horarios</h4>
+                    <p>🍽️ Almuerzos: Mar-Vie 11:30-14:00</p>
+                    <p>🌙 Cenas: Mar-Dom 20:00-23:00</p>
+                    <p>🚫 Lunes: Cerrado</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/elpasajefood/" target="_blank">📱 Instagram</a>
+                        <a href="https://www.facebook.com/Elpasajepizzeria/" target="_blank">📘 Facebook</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p><span onclick="accessCEO()" style="color: rgba(255,255,255,0.01); cursor: default; font-size: 10px; margin-right: 3px;" title="">●</span>&copy; 2026 El Pasaje Food. Todos los derechos reservados. | Hecho con 🔥 y mucho sabor</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div id="chatbot" class="chatbot-container">
+        <div class="chatbot-prompt">
+            <span class="prompt-text">Pedí con un click</span>
+        </div>
+        <button id="chatbot-toggle" class="chatbot-toggle">
+            <div class="ai-cloud">
+                <span class="ai-text">IA</span>
+            </div>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+                <path d="M7 9h2v2H7zm8 0h2v2h-2zm-4 0h2v2h-2z"/>
+            </svg>
+        </button>
+        <div id="chatbot-window" class="chatbot-window">
+            <div class="chatbot-header">
+                <h3>🍔 Asistente El Pasaje</h3>
+                <button id="chatbot-close" class="chatbot-close">✕</button>
+            </div>
+            <div id="chatbot-messages" class="chatbot-messages">
+                <div class="bot-message">
+                    <p>¡Hola! 👋 Bienvenido a El Pasaje Food.<br><br>¿Qué te gustaría pedir hoy?</p>
+                    <div class="quick-replies">
+                        <button class="quick-reply" data-action="menu">Ver Menú 🍔</button>
+                        <button class="quick-reply" data-action="promos">Promociones 🔥</button>
+                        <button class="quick-reply" data-action="horarios">Horarios ⏰</button>
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbot-text" placeholder="Escribe tu mensaje...">
+                <button id="chatbot-send">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="tracking.js"></script>
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+    <script src="cart.js"></script>
+    <script src="pwa.js"></script>
+</body>
+</html>
