@@ -1,0 +1,49 @@
+name: Deploy to Server (RSYNC)
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Setup SSH Key
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -p ${{ secrets.SSH_PORT }} -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+        
+    - name: Deploy files via RSYNC
+      run: |
+        rsync -avz --delete \
+          --exclude='.git' \
+          --exclude='node_modules' \
+          --exclude='.github' \
+          --exclude='.gitignore' \
+          --exclude='DEPLOYMENT-GUIDE.md' \
+          --exclude='COMANDOS-DEPLOYMENT.md' \
+          --exclude='READY-TO-DEPLOY.md' \
+          -e "ssh -p ${{ secrets.SSH_PORT }}" \
+          ./ ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:${{ secrets.DEPLOY_PATH }}/
+        
+    - name: Set Permissions
+      run: |
+        ssh -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} << 'EOF'
+          cd ${{ secrets.DEPLOY_PATH }}
+          find . -type f -exec chmod 644 {} \;
+          find . -type d -exec chmod 755 {} \;
+          echo "✅ Permisos configurados correctamente"
+        EOF
+        
+    - name: Deployment Success
+      run: |
+        echo "🚀 Despliegue completado exitosamente"
+        echo "⏰ $(date)"

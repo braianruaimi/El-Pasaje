@@ -1,0 +1,43 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - master    # Se ejecuta automáticamente con cada push a master
+  workflow_dispatch:  # También permite ejecutar manualmente desde GitHub
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Deploy to Server via SSH
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        password: ${{ secrets.SSH_PASSWORD }}
+        port: ${{ secrets.SSH_PORT }}
+        script: |
+          # Navegar al directorio del sitio web
+          cd ${{ secrets.DEPLOY_PATH }}
+          
+          # Hacer backup rápido
+          cp -r . ../backup-$(date +%Y%m%d-%H%M%S) 2>/dev/null || true
+          
+          # Actualizar el código
+          git pull origin master
+          
+          # Ajustar permisos si es necesario
+          find . -type f -exec chmod 644 {} \;
+          find . -type d -exec chmod 755 {} \;
+          
+          echo "✅ Despliegue completado exitosamente"
+
+    - name: Verificar despliegue
+      run: |
+        echo "🚀 Aplicación desplegada en: https://tu-dominio.com"
+        echo "⏰ Tiempo de despliegue: $(date)"
