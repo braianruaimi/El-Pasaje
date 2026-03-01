@@ -1137,7 +1137,7 @@ body {
 }
 
 .firma-ruaimi {
-    font-family: 'Brush Script MT', cursive;
+    font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
     font-size: 14px;
     color: rgba(212, 149, 60, 0.3);
     margin-top: 8px;

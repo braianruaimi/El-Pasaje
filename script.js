@@ -220,6 +220,18 @@ document.addEventListener('DOMContentLoaded', () => {
             statusBadge.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
             statusBadge.style.color = 'white';
         }
+        
+        // Mostrar el badge
+        statusBadge.style.opacity = '1';
+        statusBadge.style.visibility = 'visible';
+        
+        // Desaparecer después de 3 segundos
+        setTimeout(() => {
+            statusBadge.style.opacity = '0';
+            setTimeout(() => {
+                statusBadge.style.visibility = 'hidden';
+            }, 300);
+        }, 3000);
     };
 
     showCurrentDaySchedule();
