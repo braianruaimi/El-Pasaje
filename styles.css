@@ -323,6 +323,12 @@ body {
     margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+    .value-icon {
+        font-size: 2.5rem;
+    }
+}
+
 .value-card h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
@@ -953,8 +959,14 @@ body {
     }
     
     .cta-button {
-        padding: 18px 30px;
-        font-size: 1.1rem;
+        padding: 15px 25px;
+        font-size: 1rem;
+        gap: 10px;
+    }
+    
+    .cta-button svg {
+        width: 20px;
+        height: 20px;
     }
     
     .value-grid,
@@ -967,17 +979,23 @@ body {
     }
     
     .floating-buttons {
-        bottom: 20px;
-        right: 20px;
+        bottom: 15px;
+        right: 15px;
+        gap: 8px;
     }
     
     .float-button {
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .float-button svg {
+        width: 20px;
+        height: 20px;
     }
     
     .burger-emoji {
-        font-size: 24px;
+        font-size: 22px;
     }
     
     .header-content {
@@ -986,8 +1004,21 @@ body {
     }
     
     .install-button {
-        font-size: 12px;
-        padding: 10px 20px;
+        font-size: 11px;
+        padding: 8px 16px;
+    }
+    
+    .install-button svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .horario-icon {
+        font-size: 2.5rem;
+    }
+    
+    .payment-icon {
+        font-size: 2.5rem;
     }
 }
 
@@ -1228,13 +1259,20 @@ body {
 
 @media (max-width: 768px) {
     .chatbot-container {
-        bottom: 150px;
-        right: 20px;
+        bottom: 110px;
+        right: 15px;
+    }
+    
+    .chatbot-toggle {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
     }
     
     .chatbot-window {
-        width: calc(100vw - 40px);
+        width: calc(100vw - 30px);
         height: 450px;
+        right: -10px;
     }
     
     .carousel-arrow {
@@ -1781,38 +1819,46 @@ html {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .cart-container {
-        bottom: 120px;
-        left: 20px;
+        bottom: 80px;
+        left: 15px;
     }
     
     .cart-toggle {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
     }
     
     .cart-panel {
-        width: 320px;
-        left: -10px;
+        width: calc(100vw - 30px);
+        left: 0;
     }
     
     .chatbot-prompt {
-        right: 60px;
-        padding: 8px 14px;
+        right: 55px;
+        padding: 6px 12px;
     }
     
     .prompt-text {
-        font-size: 12px;
+        font-size: 11px;
     }
     
     .ai-cloud {
-        width: 30px;
-        height: 30px;
-        top: -6px;
-        left: -6px;
+        width: 28px;
+        height: 28px;
+        top: -5px;
+        left: -5px;
     }
     
     .ai-text {
-        font-size: 10px;
+        font-size: 9px;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
     }
 }

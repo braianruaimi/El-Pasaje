@@ -54,7 +54,9 @@ window.addEventListener('appinstalled', () => {
 // Registrar Service Worker para funcionalidad offline
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
+        // Usar ruta relativa para GitHub Pages
+        const swPath = './service-worker.js';
+        navigator.serviceWorker.register(swPath)
             .then((registration) => {
                 console.log('✅ Service Worker registrado:', registration.scope);
             })

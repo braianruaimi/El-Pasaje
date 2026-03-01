@@ -1,13 +1,15 @@
 // Service Worker para funcionalidad offline
 const CACHE_NAME = 'el-pasaje-food-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/script.js',
-  '/chatbot.js',
-  '/pwa.js',
-  '/manifest.json'
+  './',
+  './index.html',
+  './styles.css',
+  './script.js',
+  './chatbot.js',
+  './cart.js',
+  './tracking.js',
+  './pwa.js',
+  './manifest.json'
 ];
 
 // Instalación del Service Worker
