@@ -329,7 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Consola de bienvenida
-    console.log('%c🍔 El Pasaje Food', 'font-size: 30px; font-weight: bold; color: #F5C842;');
+    console.log('%c🍔 Burger', 'font-size: 30px; font-weight: bold; color: #F5C842;');
     console.log('%c¡Gracias por visitar nuestra web!', 'font-size: 16px; color: #D4953C;');
     console.log('%cSi tenés hambre, ¡hace tu pedido por WhatsApp! 📱', 'font-size: 14px; color: #FFF;');
 });

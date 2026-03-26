@@ -48,7 +48,7 @@ window.addEventListener('appinstalled', () => {
     deferredPrompt = null;
     
     // Mostrar mensaje de bienvenida
-    alert('¡Gracias por instalar El Pasaje Food! 🍔\nAhora puedes acceder rápidamente desde tu pantalla de inicio.');
+    alert('¡Gracias por instalar Burger! 🍔\nAhora puedes acceder rápidamente desde tu pantalla de inicio.');
 });
 
 // Registrar Service Worker para funcionalidad offline

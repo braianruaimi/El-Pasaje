@@ -85,7 +85,7 @@ self.addEventListener('push', (event) => {
   };
 
   event.waitUntil(
-    self.registration.showNotification('El Pasaje Food', options)
+    self.registration.showNotification('Burger', options)
   );
 });
 

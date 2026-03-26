@@ -271,7 +271,7 @@ function handleQuickReply(action) {
         case 'order':
             if (selectedCombo) {
                 const whatsappMessage = encodeURIComponent(
-                    `¡Hola! Quiero pedir:\n\n${selectedCombo.emoji} ${selectedCombo.name}\nPrecio: $${selectedCombo.price.toLocaleString('es-AR')}`
+                    `¡Hola! Quiero pedir en Burger:\n\n${selectedCombo.emoji} ${selectedCombo.name}\nPrecio: $${selectedCombo.price.toLocaleString('es-AR')}`
                 );
                 addMessage('¡Perfecto! Te llevo a WhatsApp para confirmar tu pedido', 'bot');
                 setTimeout(() => {
